@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Hero - PKL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pilih Hero</h1>
+        <div class="heroes">
+            <div class="hero" onclick="selectHero('Arlott')">
+                <img src="hero/arlott.png" alt="Arlott">
+                <p>Arlott</p>
+            </div>
+            <div class="hero" onclick="selectHero('Lapu-lapu')">
+                <img src="hero/lapu.png" alt="Lapu-lapu">
+                <p>Lapu-lapu</p>
+            </div>
+            <div class="hero" onclick="selectHero('Novaria')">
+                <img src="hero/nova.png" alt="Novaria">
+                <p>Novaria</p>
+            </div>
+            <div class="hero" onclick="selectHero('Yuzhong')">
+                <img src="hero/yz.png" alt="Yuzhong">
+                <p>Yuzhong</p>
+            </div>
+            <div class="hero" onclick="selectHero('Beatrix')">
+                <img src="hero/beatrix.png" alt="Beatrix">
+                <p>Beatrix</p>
+            </div>
+            <div class="hero" onclick="selectHero('Claude')">
+                <img src="hero/claude.png" alt="Claude">
+                <p>Claude</p>
+            </div>
+            <div class="hero" onclick="selectHero('Hayabusa')">
+                <img src="hero/haya.png" alt="Hayabusa">
+                <p>Hayabusa</p>
+            </div>
+            <div class="hero" onclick="selectHero('Khufra')">
+                <img src="hero/khufra.png" alt="Khufra">
+                <p>Khufra</p>
+            </div>
+            <div class="hero" onclick="selectHero('Lancelot')">
+                <img src="hero/lance.png" alt="Lancelot">
+                <p>Lancelot</p>
+            </div>
+            <div class="hero" onclick="selectHero('Moskov')">
+                <img src="hero/moskov.png" alt="Moskov">
+                <p>Moskov</p>
+            </div>
+        </div>
+        <div id="selected-hero">
+            <div class="hero-image">
+                <img src="" alt="Hero Image">
+            </div>
+            <div class="hero-info">
+                <h2></h2>
+                <p class="hero-role"></p>
+                <p class="hero-description"></p>
+                <ul class="hero-skills">
+                    <!-- Skill list will be populated from JavaScript -->
+                </ul>
+            </div>
+        <button id="back-button" onclick="goBack()">Back</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
