@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  gap: 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/bg1.jpg') no-repeat center center/cover;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+section {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+#loginForm, #registerForm, #addForm, #editForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  background: linear-gradient(to right, #fdfdfd, #e0f7fa, #fdfdfd);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 18px rgba(0, 4, 255, 0.1);
+  max-width: 400px;
+  width: 90%;
+  margin: auto;
+  max-height: 80vh;
+  overflow: hidden; /* Prevent scrolling inside card */
+}
+
+.card h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Gaya umum untuk input dan textarea */
+.card input, .card textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, background-color 0.3s; /* Transisi halus untuk hover dan fokus */
+}
+
+/* Efek hover pada input dan textarea */
+.card input:hover, .card textarea:hover {
+  border-color: #007bff; /* Ubah warna border saat hover */
+  background-color: rgba(0, 123, 255, 0.1); /* Ubah warna latar belakang saat hover */
+}
+
+/* Efek fokus pada input dan textarea */
+.card input:focus, .card textarea:focus {
+  border-color: #0056b3; /* Ubah warna border saat elemen mendapatkan fokus */
+  outline: none; /* Hilangkan outline default */
+  background-color: #f0f8ff; /* Ubah warna latar belakang saat elemen mendapatkan fokus */
+}
+
+
+.card .button_group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.header .user_info {
+  display: flex;
+  gap: 10px;
+}
+
+#notes {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 60vh; /* Adjust height as needed */
+  margin-top: 20px;
+}
+
+.note_list {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.note_list .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.note_list .head h3 {
+  margin: 0;
+}
+
+.note_list .head .button_group {
+  display: flex;
+  gap: 10px;
+}
+
+.note_list p {
+  margin: 0;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.add_note_button {
+  background-color: #28a745;
+}
+
+.add_note_button:hover {
+  background-color: #218838;
+}
+
+/* Add some spacing for the icons */
+.card button i,
+.header .user_info a i,
+.add_note_button i {
+  margin-right: 5px;
+}
+
+/* Adjustments for note list */
+#notes {
+  max-height: calc(100vh - 200px); /* Ensure it fits within the viewport */
+  overflow-y: auto; /* Enable scrolling */
+}
+
+/* Center the card vertically */
+.card {
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

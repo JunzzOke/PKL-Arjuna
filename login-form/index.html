@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Notes | Junzz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <section class="login">
+      <div class="card">
+        <form id="loginForm">
+          <h1>Login</h1>
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="password" name="password" placeholder="Password" required />
+          <div class="button_group">
+            <button type="button" onclick="switchDisplay(sectionRegister)">
+              <i class="fas fa-user-plus"></i> Register
+            </button>
+            <button type="submit" onclick="login(event)">
+              <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="register">
+      <div class="card">
+        <form id="registerForm">
+          <h1>Register</h1>
+          <input type="text" name="rfirstname" placeholder="First Name" required />
+          <input type="text" name="rlastname" placeholder="Last Name" required />
+          <input type="email" name="remail" placeholder="Email" required />
+          <input type="password" name="rpassword" placeholder="Password" required />
+          <input type="password" name="rcpassword" placeholder="Confirm password" required />
+          <div class="button_group">
+            <button type="button" onclick="switchDisplay(sectionLogin)">
+              <i class="fas fa-arrow-left"></i> Back to login
+            </button>
+            <button type="submit" onclick="register(event)">
+              <i class="fas fa-user-plus"></i> Register
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="home">
+      <div class="header">
+        <h1>List Note</h1>
+        <div class="user_info">
+          <p id="email"></p>
+          <span>|</span>
+          <a href="" onclick="localStorage.removeItem('token'); switchDisplay(sectionLogin)">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </a>
+        </div>
+        <button onclick="switchDisplay(sectionAdd)" class="add_note_button">
+          <i class="fas fa-plus"></i> Add note
+        </button>
+      </div>
+      <div id="notes"></div>
+    </section>
+    <section class="add">
+      <div class="card">
+        <form id="addForm">
+          <h1>Add Note</h1>
+          <input type="text" name="title" id="addTitle" placeholder="Title" required />
+          <textarea name="content" id="addContent" placeholder="Content" required></textarea>
+          <div class="button_group">
+            <button type="button" onclick="switchDisplay(sectionHome)">
+              <i class="fas fa-times"></i> Cancel
+            </button>
+            <button type="submit" onclick="addNote(event)">
+              <i class="fas fa-plus"></i> Add
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="edit">
+      <div class="card">
+        <form id="editForm">
+          <h1>Edit Note</h1>
+          <input type="hidden" name="id" id="editId">
+          <input type="text" name="title" id="editTitle" placeholder="Title" required>
+          <textarea name="content" id="editContent" placeholder="Content" required></textarea>
+          <div class="button_group">
+            <button type="button" onclick="switchDisplay(sectionHome)">
+              <i class="fas fa-times"></i> Cancel
+            </button>
+            <button type="submit" onclick="editNote(event)">
+              <i class="fas fa-save"></i> Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>
