@@ -1,0 +1,209 @@
+/* Umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+}
+
+/* Kontainer Umum */
+.container {
+    background: #fff;
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Form Umum */
+form {
+    margin: 0;
+}
+
+/* Form Input Group */
+.input-group {
+    padding: 1% 0;
+    position: relative;
+    margin-bottom: 1rem; /* Tambahkan jarak antar input */
+}
+
+/* Ikon dalam Input */
+.input-group i {
+    position: absolute;
+    color: black;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Input */
+input {
+    color: inherit;
+    width: calc(100% - 40px); /* Kurangi lebar untuk ikon */
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #757575;
+    padding: 10px 10px 10px 40px; /* Tambahkan padding untuk ikon */
+    font-size: 15px;
+    margin-bottom: 1rem; /* Tambahkan jarak antar input */
+}
+
+/* Fokus Input */
+input:focus {
+    background-color: transparent;
+    outline: transparent;
+    border-bottom: 2px solid hsl(327, 90%, 28%);
+}
+
+/* Placeholder Input */
+input::placeholder {
+    color: transparent;
+}
+
+/* Label */
+label {
+    color: #757575;
+    position: absolute;
+    left: 40px; /* Sesuaikan posisi label */
+    top: -1.2em;
+    cursor: auto;
+    transition: 0.3s ease all;
+}
+
+/* Label saat Fokus Input */
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+    top: -3em;
+    color: hsl(327, 90%, 28%);
+    font-size: 15px;
+}
+
+/* Tombol Submit */
+.btn {
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(125, 125, 235);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 1rem; /* Tambahkan jarak atas */
+}
+
+.btn:hover {
+    background: #432d89;
+    color: white;
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+/* Link */
+.links {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.links p {
+    margin-right: 10px;
+}
+
+.links button {
+    background: none;
+    border: none;
+    color: rgb(125, 125, 235);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.links button:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+
+/* Heading */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Paragraf */
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Link */
+a {
+    color: rgb(125, 125, 235);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #4f3d8d;
+}
+
+/* Tombol Umum */
+button, .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: none;
+    background: rgb(125, 125, 235);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin: 10px 0; /* Tambahkan jarak antar tombol */
+}
+
+
+
+/* Tombol Logout Khusus */
+.logout-button {
+    background: rgb(125, 125, 235);
+}
+
+.logout-button:hover {
+    background: #07001f;
+}
+
+/* Tombol Tambah Note */
+.add-note-button {
+    background: #28a745;
+}
+
+.add-note-button:hover {
+    background: #1e7e34;
+}
+
+/* Tombol Edit Note */
+.edit-note-button {
+    background: #ffc107;
+}
+
+.edit-note-button:hover {
+    background: #e0a800;
+}
+
+/* Tombol Hapus Note */
+.delete-note-button {
+    background: #dc3545;
+}
+
+.delete-note-button:hover {
+    background: #c82333;
+}
